@@ -1,0 +1,20 @@
+{
+  "name": "myorder",
+  "version": "1.0.0",
+  "description": "La idea de este proyecto es aprender distintas tecnologias. Entre ellas se encuentran, React, Vue y Angular en el frontend. Express, Adonis y Nest en el backend. Tambien se incluira MySql.",
+  "main": "index.js",
+  "scripts": {
+    "react": "cd myordertables && npm start",
+    "angular": "cd myordermanagement && ng serve",
+    "vue": "cd myorderreports && npm run serve",
+    "dev": "concurrently  \"npm run react\" \"npm run angular\" \"npm run vue\" \"nodemon serverMain.js\"",
+    "devServer|": "nodemon serverMain.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4"
+  }
+}
