@@ -1,1 +1,98 @@
 /node_modules
+
+#### myordertables (React) ####
+
+# dependencies
+myordertables/node_modules
+myordertables//.pnp
+myordertables/.pnp.js
+
+# testing
+myordertables/coverage
+
+# production
+myordertables/build
+
+# misc
+myordertables/.DS_Store
+myordertables/.env.local
+myordertables/.env.development.local
+myordertables/.env.test.local
+myordertables/.env.production.local
+
+myordertables/npm-debug.log*
+myordertables/yarn-debug.log*
+myordertables/yarn-error.log*
+
+#### myorderreports (Angular) ####
+
+myorderreports/.DS_Store
+myorderreports/node_modules
+myorderreports/dist
+
+# local env files
+myorderreports/.env.local
+myorderreports/.env.*.local
+
+# Log files
+myorderreports/npm-debug.log*
+myorderreports/yarn-debug.log*
+myorderreports/yarn-error.log*
+
+# Editor directories and files
+myorderreports/.idea
+myorderreports/.vscode
+myorderreports/*.suo
+myorderreports/*.ntvs*
+myorderreports/*.njsproj
+myorderreports/*.sln
+myorderreports/*.sw?
+
+#### myordermanagement (Vue) ####
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+myordermanagement/dist
+myordermanagement/tmp
+myordermanagement/out-tsc
+# Only exists if Bazel was run
+myordermanagement/bazel-out
+
+# dependencies
+myordermanagement/node_modules
+
+# profiling files
+myordermanagement/chrome-profiler-events*.json
+myordermanagement/speed-measure-plugin*.json
+
+# IDEs and editors
+myordermanagement/.idea
+myordermanagement/.project
+myordermanagement/.classpath
+myordermanagement/.c9/
+myordermanagement/*.launch
+myordermanagement/.settings/
+myordermanagement/*.sublime-workspace
+
+# IDE - VSCode
+myordermanagement/.vscode/*
+myordermanagement/!.vscode/settings.json
+myordermanagement/!.vscode/tasks.json
+myordermanagement/!.vscode/launch.json
+myordermanagement/!.vscode/extensions.json
+myordermanagement/.history/*
+
+# misc
+myordermanagement/.sass-cache
+myordermanagement/connect.lock
+myordermanagement/coverage
+myordermanagement/libpeerconnection.log
+myordermanagement/npm-debug.log
+myordermanagement/yarn-error.log
+myordermanagement/testem.log
+myordermanagement/typings
+
+# System Files
+myordermanagement/.DS_Store
+myordermanagement/Thumbs.db

@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+myordertables/node_modules
+myordertables//.pnp
+myordertables/.pnp.js
+
+# testing
+myordertables/coverage
+
+# production
+myordertables/build
+
+# misc
+myordertables/.DS_Store
+myordertables/.env.local
+myordertables/.env.development.local
+myordertables/.env.test.local
+myordertables/.env.production.local
+
+myordertables/npm-debug.log*
+myordertables/yarn-debug.log*
+myordertables/yarn-error.log*
