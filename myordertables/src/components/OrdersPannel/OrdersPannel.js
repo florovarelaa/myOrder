@@ -2,32 +2,17 @@ import React, { Component } from 'react';
 import Container from '../Container/Container';
 import Footer from '../Footer/Footer';
 import Order from '../Order/Order';
-import './OrdersPannel.css'
+import './OrdersPannel.css';
+import API from '../../API';
 
 class OrdersPannel extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            orders: [{
-                id: 0,
-                employee: null,
-                products: [{}],
-                closed: false,
-            },
-            {
-                id: 1,
-                employee: null,
-                products: [{}],
-                closed: false,
-            },
-            {
-                id: 2,
-                employee: null,
-                products: [{}],
-                closed: true,
-            }],
+            orders: [],
             tables: [{}],
-            products: [],
+            products: [{}],
+            employees: [{}],
             total: 0,
         }
     }
@@ -35,11 +20,13 @@ class OrdersPannel extends Component {
     componentDidMount() {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())
-            .then(data => this.setState({  tables: data }))
-        
-        fetch('https://jsonplaceholder.typicode.com/albums/10')
-            .then(response => response.json())
-            .then(data => this.setState({  products: data }))
+            .then(data => this.setState({  employees: data })); 
+
+        this.setState({
+            // orders: API.orders,
+            products: API.products,
+            tables: API.tables,
+        })
     }
 
     newOrder = (newOrder) => {
@@ -56,26 +43,24 @@ class OrdersPannel extends Component {
                     {/* Tables */}
                     <Container>
                         {this.state.tables.map( (table, index) => {
-                            return (
-                                <Order tableNumber={table.id} orderNumber={null} key={index}>
-                                </Order>
-                            )
+                            return <Order order={table} tableNumber={table.tableId} orderNumber={null} key={index} />
                         })}
                     </Container>
-                    
+
                     {/* Orders To Go */}
                     <Container>
                         <button onClick={ () => {
                             this.newOrder({
-                                id: this.state.orders.length,
+                                id: this.state.orders.length + 1,
+                                tableId: null,
                                 employee: null,
                                 products: [{}],
-                                closed: false
+                                opened: true
                             })
                         }}> New Order </button>
 
-                        {Array.from(this.state.orders).map( (order, index) => {
-                            return <Order tableNumber={null} orderNumber={order.id} key={index} />
+                        {Array.from(this.state.orders).filter( e => e.opened === true && e.tableId == null).map( (order, index) => {
+                            return <Order order={order} tableNumber={null} orderNumber={order.id} key={index} />
                         })}
                     </Container>
                 </div>
