@@ -1,9 +1,16 @@
-import React, { Component } from 'react'; 
+import React, { Component } from 'react';
+import OrderModal from './OrderModal/OrderModal'
 
 class Order extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            
+        }
+
+    }
 
     showModal(order) {
-        console.log('order', order)
     }
 
     render() {

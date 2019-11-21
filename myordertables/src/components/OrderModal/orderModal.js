@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class OrderDetail extends Component {
+class OrderModal extends Component {
     render() {
         return(
             <div>
-
+                Hello Modal
             </div>
         )
     }
 }
 
-export default OrderDetail;
+export default OrderModal;
