@@ -22,3 +22,6 @@ Arquitectura de la BD
 
 -- Bases del sistema
     - Locales
+
+Tutorial de redux
+    https://www.freecodecamp.org/news/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6/

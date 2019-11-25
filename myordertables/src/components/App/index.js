@@ -1,5 +1,10 @@
-import Orders from '../OrdersPannel/OrdersPannel.js';
+import OrdersPannel from '../OrdersPannel/OrdersPannel.js';
 import React from 'react';
+import reducer from '../../reducers';
+import { store } from '../../store/index.js';
+import ButtonGroup from '../ButtonGroup/ButtonGroup.js';
+
+console.log(store.getState())
 
 function App() {
   return (
@@ -23,7 +28,9 @@ function App() {
         >
           Tables
         </a>
-        <Orders />
+        {/* <OrdersPannel tables={store.tables}/> */}
+        <ButtonGroup key={2} technologies={["React", "Elm", "React-redux"]} />
+        {console.log(store.getState())}
       </header>
     </div>
   );
